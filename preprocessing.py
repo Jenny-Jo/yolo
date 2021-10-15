@@ -2,11 +2,18 @@ from glob import glob
 import yaml
 
 
-# 데이터셋 경로 설정
+# 데이터셋 압축해제 1안
 
 root='C:/dataset/yz_tile_resize_split_blur' # 데이터 경로 수정 필수
-zip_file=zipfile.ZipFile(root+'.zip')
-zip_file.extractall() # extractall() 안에 데이터가 들어갈 폴더를 지정해도 됨.
+zip_file=zipfile.ZipFile(root+'.zip') # zip파일 경로로 수정해도 무방함.
+zip_file.extractall(root) # extractall() 안에 데이터가 들어갈 폴더를 지정해도 됨.
+zip_file.close()
+
+# 데이터셋 압축해제 2안
+data_zip = './dataset.zip'
+root='./datapath
+zip_file=zipfile.ZipFile(data_zip)
+zip_file.extractall(root)
 zip_file.close()
 
 # 데이터셋 별로 경로를 변수에 저장하기
