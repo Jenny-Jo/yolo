@@ -1,10 +1,13 @@
 from glob import glob
 import yaml
+import zipfile
 
 
 
 # 데이터셋 경로 설정
-root='C:/dataset/yz_tile_resize_split_blur'
+root='C:/dataset/yz_tile_resize_split_blur.zip'
+zip_file=zipfile.ZipFile(root)
+zip_file.extractall()
 
 # 데이터셋 별로 경로를 변수에 저장하기
 train_img_list = glob(root+'/train/images/*.jpg')
