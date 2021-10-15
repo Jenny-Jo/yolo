@@ -12,7 +12,7 @@ zip_file.close()
 '''
 # 데이터셋 압축해제 2안
 data_zip = './dataset.zip'
-root='./datapath
+root='./datapath'
 zip_file=zipfile.ZipFile(data_zip)
 zip_file.extractall(root)
 zip_file.close()
